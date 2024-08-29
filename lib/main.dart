@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ostad_flutter/HomePage.dart';
+import 'package:ostad_flutter/pages/mobile/mobile_home_screen.dart';
 void main(){
   runApp(const MyApp());
 }

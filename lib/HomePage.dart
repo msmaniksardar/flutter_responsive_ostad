@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ostad_flutter/pages/desktop/desktop_home_screen.dart';
+import 'package:ostad_flutter/pages/mobile/mobile_home_screen.dart';
+import 'package:ostad_flutter/pages/tablet/tablet_home_screen.dart';
 import 'package:ostad_flutter/responsive/responsive.dart';
 
 
@@ -14,22 +17,11 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-            appBar: AppBar(
-              title: Text("Home Page"),
-            ),
             body: ResponsiveLayout(
-                Mobile: Container(
-                  width: double.maxFinite,
-                  color: Colors.red,
-                ),
-                Tablet: Container(
-                  width: double.maxFinite,
-                  color: Colors.green,
-                ),
-                Desktop: Container(
-                  width: double.maxFinite,
-                  color: Colors.yellow,
-                )))
+                Mobile:MobileHomeScreen(),
+                Tablet: TabletHomeScreen(),
+                Desktop: DesktopHomeScreen(),
+            ))
     );
   }
 }
